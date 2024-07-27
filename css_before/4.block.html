@@ -13,19 +13,28 @@
         margin: 32px;
         padding: 16px;
       }
+      p {
+        display: block; /* 한 줄에 한 요소, padding, margin 수직, 수평 */
+      }
+      span {
+        display: inline; /* 한 줄에 여러 요소, padding, margin 수평만 */
+      }
+      .inlineBlock {
+        display: inline-block; /* 한 줄에 여러 요소, padding, margin 수직, 수평 */
+      }
     </style>
   </head>
   <body>
     <h1>display: block</h1>
     <p>p 태그는 기본적으로 블럭 요소</p>
     <p>p 태그는 기본적으로 블럭 요소</p>
-    
+
     <h1>display: inline</h1>
     <span>span 태그는 인라인 요소</span>
     <span>span 태그는 인라인 요소</span>
-    
+
     <h1>display: inline-block</h1>
-    <p class="inlineBlock"> 인라인 블럭 요소</p>
-    <p class="inlineBlock"> 인라인 블럭 요소</p>
+    <p class="inlineBlock">인라인 블럭 요소</p>
+    <p class="inlineBlock">인라인 블럭 요소</p>
   </body>
 </html>

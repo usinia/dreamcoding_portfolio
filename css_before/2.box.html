@@ -12,6 +12,17 @@
         margin-bottom: 10px;
         background-color: chocolate;
       }
+      .box1,
+      .box3 {
+        padding: 20px;
+        border: 5px solid black;
+      }
+      .box1 {
+        box-sizing: border-box; /* 컨텐츠 사이즈가 border, padding 값을 포함 */
+      }
+      .box3 {
+        box-sizing: content-box; /* default, 컨텐츠 사이즈 + border, padding 값 */
+      }
     </style>
   </head>
   <body>
