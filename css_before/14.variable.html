@@ -6,16 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom properties</title>
     <style>
+      /* root 요소에 변수 정의. 변수명 -- 으로 시작 */
+      :root {
+        --background-color: darkslategrey;
+        --text-color: whitesmoke;
+      }
       .first-list {
-        background-color: darkslategrey;
-        color: whitesmoke;
+        background-color: var(--background-color);
+        color: var(--text-color);
         margin-left: 8px;
       }
       .second-list {
-        background-color: darkslategrey;
-        color: whitesmoke;
+        background-color: var(--background-color);
+        color: var(--text-color);
         margin-left: 16px;
       }
+      @media screen and (max-width: 768px) {
+        /* 모바일 반응형에서 변수 정의부만 수정하면 됨 */
+        :root {
+          --background-color: darkslateblue;
+          --text-color: white;
+        }
+      }
+      /**
+      * https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+      */
     </style>
   </head>
   <body>
