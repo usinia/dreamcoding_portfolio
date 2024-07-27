@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keyframes</title>
     <style>
+      @keyframes slidein {
+        0% {
+          border-radius: 0%;
+          background-color: aquamarine;
+        }
+        50% {
+          background-color: pink;
+        }
+        100% {
+          border-radius: 100%;
+          background-color: hotpink;
+        }
+      }
       .box {
         width: 100px;
         height: 100px;
         margin: 20px;
         background-color: chocolate;
+        animation: 3s infinite alternate slidein;
       }
+      /**
+      * https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+      * https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+      */
     </style>
   </head>
   <body>
