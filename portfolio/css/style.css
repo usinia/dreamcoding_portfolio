@@ -23,6 +23,9 @@
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
   --color-gray: #1b1e26;
+
+  /* Size */
+  --size-max-width: 1200px;
 }
 * {
   box-sizing: border-box;
@@ -69,6 +72,11 @@ button:focus {
 .section {
   padding: 4rem;
   text-align: center;
+}
+
+.max-container {
+  max-width: var(--size-max-width);
+  margin: auto;
 }
 
 .title {
@@ -175,4 +183,61 @@ button:focus {
   background-color: transparent;
   outline: 2px solid var(--color-accent); /* content size 밀림 현상 없이 테두리 적용 */
   color: var(--color-text);
+}
+
+/* About */
+.majors {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+/* box shadow site
+* https://ui.aceternity.com/tools/box-shadows
+*/
+.major {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  cursor: default;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
+}
+
+.major__icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: var(--color-accent);
+  transition: all 300ms ease;
+}
+
+.major__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.major:hover .major__icon {
+  transform: rotate(-15deg) scale(1.2);
+}
+
+.jobs {
+  text-align: start;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.job__name {
+  color: var(--color-primary);
+}
+
+.job__period {
+  color: var(--color-primary);
+  font-size: 0.8rem;
 }
