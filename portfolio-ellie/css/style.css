@@ -1,16 +1,6 @@
-/* BEM
-* Block__Element--Modifier
-* .card__button--blue
-*/
-
 /* Global */
 :root {
   /* App Colors */
-  /* 직접 색상을 지정하지 않고, 한 단계 추상화된 변수를 사용해서 이후 색상이 변경되도 (blue -> orange) App Colors 만 수정하면 되도록 추상화 */
-  /* css site
-  * https://mui.com/material-ui/customization/color/
-  * https://m2.material.io/design/color/the-color-system.html#color-theme-creation
-  */
   --color-primary: var(--color-black);
   --color-primary-variant: var(--color-gray);
   --color-accent: var(--color-blue);
@@ -27,20 +17,16 @@
   /* Size */
   --size-max-width: 1200px;
 }
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  /* font-family: "Gowun Dodum", sans-serif; */
-  /* Gowun Dodum 를 사용하고, network 이슈 등으로 사용하지 못할 경우 sans-serif 를 사용해 */
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
-/* css reset */
 h1,
 h2,
 h3,
@@ -64,6 +50,7 @@ button {
   outline: 0;
   border: 0;
 }
+
 button:focus {
   outline: 1px solid var(--color-accent);
 }
@@ -108,16 +95,11 @@ button:focus {
   gap: 8px;
 }
 
-/* img 요소를 모두 찾은 다음 .header__logo 하위 요소를 찾으므로 성능애 좋지 않다. 명시적으로 class name 을 지정하는게 성능에 좋다. */
-/* .header__logo img */
 .header__logo__img {
   width: 36px;
   height: 36px;
 }
 
-/* rem : 상대적 unit. browser 기본 font-size 의 N배. html 의 font-size.
-* em : 요소의 N배. 요소에 font-size 가 정의되지 않으면 근접 부모의 font-size를 따르기 때문에 중첩된 font-size 선언 요소에서는 컨트롤하기 힘들다. 웬만해선 rem 추천.
-*/
 .header__logo__title {
   font-size: 1.8rem;
 }
@@ -152,7 +134,7 @@ button:focus {
 .home__avatar {
   width: 250px;
   height: 250px;
-  object-fit: cover; /* 이미지 가로x세로 사이즈가 달라 찌그러질때 확대해서 비율 유지 */
+  object-fit: cover;
   border-radius: 100%;
   border: 3px solid var(--color-accent);
 }
@@ -183,7 +165,7 @@ button:focus {
 .home__contact:hover {
   background-color: transparent;
   color: var(--color-text);
-  outline: 2px solid var(--color-accent); /* content size 밀림 현상 없이 테두리 적용 */
+  outline: 2px solid var(--color-accent);
 }
 
 /* About */
@@ -194,9 +176,6 @@ button:focus {
   margin: 2.5rem 0;
 }
 
-/* box shadow site
-* https://ui.aceternity.com/tools/box-shadows
-*/
 .major {
   background-color: var(--color-primary-variant);
   padding: 2rem 1rem;
@@ -249,12 +228,12 @@ button:focus {
   color: var(--color-text);
 }
 
-.skills__container {
+.skills {
   display: grid;
   grid-template-columns: 6fr 4fr;
   margin: 2rem 3rem;
   border-radius: 8px;
-  overflow: hidden; /* 자식 요소 중에 삐져나온 부분이 있으면 숨겨줘 */
+  overflow: hidden;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
@@ -280,9 +259,7 @@ button:focus {
 .skills__etc {
   padding: 1rem;
   background-color: var(--color-primary);
-  filter: brightness(
-    150%
-  ); /* background-color를 같은 색상으로 설정하지만 다르게 표현하고 싶을 때 */
+  filter: brightness(150%);
 }
 
 .bar {
@@ -304,7 +281,6 @@ button:focus {
 }
 
 .bar__value {
-  /* 부모 width: 100%, inline style width: value */
   height: 3px;
   background-color: var(--color-accent);
 }
@@ -330,7 +306,7 @@ button:focus {
   border-radius: 4px;
   border: 1px solid var(--color-accent);
   cursor: pointer;
-  white-space: nowrap; /* 공백 줄바꿈 되지 않도록 */
+  white-space: nowrap;
 }
 
 .category--selected {
@@ -396,12 +372,9 @@ button:focus {
   transform: translateY(0px);
 }
 
-/* html 태그에 없지만 css로 꾸미기용 가상 요소 */
-.project__metadata__title:after {
-  content: "";
-  /* content는 없고 */
+.project__title:after {
+  content: '';
   display: block;
-  /* block 요소처럼 노출되고 */
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -416,14 +389,13 @@ button:focus {
   margin: 3rem;
 }
 
-li.testimonial {
+.testimonial {
   display: flex;
   gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
 }
 
-/* 짝수번째 자식요소의 이미지 태그 순서를 0 에서 1로 변경 */
 .testimonial:nth-child(even) .testimonial__img {
   order: 1;
 }
@@ -432,13 +404,13 @@ li.testimonial {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .testimonial__bubble {
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .testimonial__bubble__name {
@@ -483,27 +455,24 @@ li.testimonial {
   color: var(--color-accent);
 }
 
-/* 반응형 */
 @media screen and (max-width: 768px) {
-  /* Common */
   .section {
     padding: 3rem 2rem;
   }
+
   .title {
     font-size: 2rem;
   }
+
   .description {
     font-size: 1rem;
   }
 
-  /* Header */
   .header {
     flex-direction: column;
     align-items: start;
   }
-  .header__nav {
-    width: 100%;
-  }
+
   .header__menu {
     flex-direction: column;
     text-align: center;
@@ -511,52 +480,56 @@ li.testimonial {
     gap: 1rem;
   }
 
-  /* Home */
+  .header__nav {
+    width: 100%;
+  }
+
   #home {
     padding-bottom: 3rem;
   }
+
   .home__title {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
 
-  /* About */
   .majors {
     flex-direction: column;
     align-items: center;
   }
+
   .major {
     max-width: 25rem;
   }
+
   .job {
     justify-content: center;
   }
 
-  /* Skills */
-  .skills__container {
+  .skills {
     grid-template-columns: 1fr;
   }
 
-  /* Work */
   .categories {
     flex-direction: column;
   }
+
   .category {
     width: 100%;
   }
+
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Testimonial */
-  li.testimonial {
+  .testimonial {
     flex-direction: column;
   }
+
   .testimonial:nth-child(even) .testimonial__img {
     order: 0;
   }
 
-  /* Arrow up */
   .arrow-up {
     font-size: 2rem;
     width: 3rem;
