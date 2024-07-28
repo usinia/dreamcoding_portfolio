@@ -33,6 +33,7 @@ body {
   /* Gowun Dodum 를 사용하고, network 이슈 등으로 사용하지 못할 경우 sans-serif 를 사용해 */
   font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
 /* css reset */
@@ -51,7 +52,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 button {
@@ -63,32 +64,52 @@ button:focus {
   outline: 1px solid var(--color-accent);
 }
 
-header {
+/* Header */
+.header {
+  background-color: #050a13;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
+.header__logo {
   display: flex;
-
-  img {
-    width: 50px;
-    height: 50px;
-  }
-  h1 {
-    margin: 0;
-  }
+  align-items: center;
+  gap: 8px;
 }
 
-nav {
-  ul {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    list-style-type: none;
-    margin: auto;
-  }
-  li {
-    margin-right: 3px;
-    padding: 5px;
-  }
+/* img 요소를 모두 찾은 다음 .header__logo 하위 요소를 찾으므로 성능애 좋지 않다. 명시적으로 class name 을 지정하는게 성능에 좋다. */
+/* .header__logo img */
+.header__logo__img {
+  width: 36px;
+  height: 36px;
+}
+
+/* rem : 상대적 unit. browser 기본 font-size 의 N배. html 의 font-size.
+* em : 요소의 N배. 요소에 font-size 가 정의되지 않으면 근접 부모의 font-size를 따르기 때문에 중첩된 font-size 선언 요소에서는 컨트롤하기 힘들다. 웬만해선 rem 추천.
+*/
+.header__logo__title {
+  font-size: 1.8rem;
+}
+
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+
+.header__menu__item {
+  padding: 8px 16px;
+}
+
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
 }
