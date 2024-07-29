@@ -383,7 +383,7 @@ button:focus {
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
   gap: 1rem;
 }
 
@@ -391,6 +391,10 @@ button:focus {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
