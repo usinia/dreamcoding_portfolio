@@ -47,6 +47,11 @@ const handmeNavbarMenuToggle = () => {
   navbarToggle.addEventListener("click", () => {
     navbarMenu.classList.toggle("open"); // toggle: 있으면 추가, 없으면 삭제
   });
+
+  // menu 안에 요소를 클릭하면 닫히게
+  navbarMenu.addEventListener("click", () => {
+    navbarMenu.classList.remove("open");
+  });
 };
 
 handleHeaderStyle();

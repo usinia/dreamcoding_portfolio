@@ -144,7 +144,13 @@ button:focus {
 }
 
 .header__menu__item {
+  display: block;
   padding: 8px 16px;
+  border-bottom: 1px solid transparent;
+  /* border 를 추가하면 요소가 밀리는 현상 해결
+  - 1. 요소 height
+  - 2. border-bottom 을 투명값으로 주고 :hover 에서 색상 추가
+  */
 }
 
 .header__menu__item:hover {
@@ -509,7 +515,7 @@ li.testimonial {
 @media screen and (max-width: 768px) {
   /* Common */
   .section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
   .title {
     font-size: 2rem;
@@ -534,7 +540,8 @@ li.testimonial {
     display: none;
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
+    margin: 1rem 4rem;
+    /* padding : event click 요소로 잡힌다. margin : click 요소로 잡히지 않는다. */
     gap: 1rem;
   }
   .header__menu.open {
