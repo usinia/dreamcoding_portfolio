@@ -9,7 +9,7 @@ categoriesEl.addEventListener("click", (e) => {
   if (!category) return;
 
   /*
-  categoriesEl.querySelectorAll("button").forEach((v) => {
+  categoriesEl.querySelectorAll("button.category").forEach((v) => {
     v.dataset.category === category
       ? v.classList.add("category--selected")
       : v.classList.remove("category--selected");
@@ -20,7 +20,8 @@ categoriesEl.addEventListener("click", (e) => {
   activeBtn.classList.remove("category--selected");
   e.target.classList.add("category--selected");
 
-  projectsEl.querySelectorAll("li").forEach((v) => {
+  projectsEl.classList.add("animation-out");
+  projectsEl.querySelectorAll("li.project").forEach((v) => {
     /*
     if (category === "all") {
       v.classList.remove("invisible");
@@ -41,4 +42,7 @@ categoriesEl.addEventListener("click", (e) => {
       v.style.display = "none";
     }
   });
+  setTimeout(() => {
+    projectsEl.classList.remove("animation-out");
+  }, 250);
 });
