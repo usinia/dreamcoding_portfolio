@@ -38,8 +38,18 @@ const handleArrowUp = () => {
       arrowUpEl.classList.remove("visible");
     }
   });
-}
+};
+
+// NavBar 토글 버튼 클릭 처리
+const handmeNavbarMenuToggle = () => {
+  const navbarMenu = document.querySelector(".header__menu");
+  const navbarToggle = document.querySelector(".header__toggle");
+  navbarToggle.addEventListener("click", () => {
+    navbarMenu.classList.toggle("open"); // toggle: 있으면 추가, 없으면 삭제
+  });
+};
 
 handleHeaderStyle();
 handleHomeStyle();
 handleArrowUp();
+handmeNavbarMenuToggle();
