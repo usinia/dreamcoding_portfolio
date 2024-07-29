@@ -24,5 +24,22 @@ const handleHomeStyle = () => {
   });
 };
 
+// Home 이 반 정도 가려지면 Arrrow Up 버튼 노툴
+const handleArrowUp = () => {
+  const arrowUpEl = document.querySelector(".arrow-up");
+  const homeEl = document.querySelector(".home__container");
+
+  document.addEventListener("scroll", function () {
+    if (window.scrollY > homeEl.offsetHeight / 2) {
+      // arrowUpEl.style.opacity = 1;
+      arrowUpEl.classList.add("visible");
+    } else {
+      // arrowUpEl.style.opacity = 0;
+      arrowUpEl.classList.remove("visible");
+    }
+  });
+}
+
 handleHeaderStyle();
 handleHomeStyle();
+handleArrowUp();
