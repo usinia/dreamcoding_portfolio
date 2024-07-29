@@ -8,41 +8,29 @@ categoriesEl.addEventListener("click", (e) => {
   const { category } = e.target.dataset;
   if (!category) return;
 
-  /*
-  categoriesEl.querySelectorAll("button.category").forEach((v) => {
-    v.dataset.category === category
-      ? v.classList.add("category--selected")
-      : v.classList.remove("category--selected");
-  });
-  */
-  //  Active 메뉴를 재설정
+  handleActiveSelection(e.target);
+  filterProjects(category);
+});
+
+//  Active 메뉴를 재설정
+function handleActiveSelection(target) {
   const activeBtn = document.querySelector(".category--selected");
   activeBtn.classList.remove("category--selected");
-  e.target.classList.add("category--selected");
+  target.classList.add("category--selected");
+}
 
-  projectsEl.classList.add("animation-out");
+function filterProjects(filter) {
   projectsEl.querySelectorAll("li.project").forEach((v) => {
-    /*
-    if (category === "all") {
-      v.classList.remove("invisible");
-    } else {
-      if (v.dataset.category !== category) {
-        v.classList.add("invisible");
-      } else {
-        v.classList.remove("invisible");
-      }
-    }
-    */
     //  프로젝트 필터링
-    if (category === "all" || v.dataset.category === category) {
-      // v.classList.remove("invisible");
+    if (filter === "all" || v.dataset.category === filter) {
       v.style.display = "block";
     } else {
-      // v.classList.add("invisible");
       v.style.display = "none";
     }
   });
+
+  projectsEl.classList.add("animation-out");
   setTimeout(() => {
     projectsEl.classList.remove("animation-out");
   }, 250);
-});
+}
