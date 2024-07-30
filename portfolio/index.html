@@ -55,6 +55,7 @@
     <!-- Javascript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
     <!-- defer : not need to wait for the download of this file when interpreting HTML documents -->
   </head>
   <body>
@@ -70,15 +71,36 @@
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a class="header__menu__item active" href="#home">Home</a></li>
-          <li><a class="header__menu__item" href="#about">About</a></li>
-          <li><a class="header__menu__item" href="#skills">Skills</a></li>
-          <li><a class="header__menu__item" href="#work">Work</a></li>
           <li>
-            <a class="header__menu__item" href="#testimonial">Testimonial</a>
+            <a class="header__menu__item active" href="#home" data-nav="home"
+              >Home</a
+            >
           </li>
           <li>
-            <a class="header__menu__item" href="#contact">Contact</a>
+            <a class="header__menu__item" href="#about" data-nav="about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#skills" data-nav="skills"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#work" data-nav="work">Work</a>
+          </li>
+          <li>
+            <a
+              class="header__menu__item"
+              href="#testimonial"
+              data-nav="testimonial"
+              >Testimonial</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#contact" data-nav="contact"
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
@@ -90,7 +112,7 @@
     <!-- Main -->
     <main>
       <!-- Home -->
-      <section id="home" class="home">
+      <section id="home" class="home" data-nav="home">
         <div class="home__container">
           <img
             class="home__avatar"
@@ -109,7 +131,7 @@
         </div>
       </section>
       <!-- About -->
-      <section id="about" class="section max-container about">
+      <section id="about" class="section max-container about" data-nav="about">
         <h2 class="title">About me</h2>
         <p class="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
@@ -152,7 +174,7 @@
         </ul>
       </section>
       <!-- Skills -->
-      <section id="skills" class="section skills">
+      <section id="skills" class="section skills" data-nav="skills">
         <div class="max-container">
           <h2 class="title">My Skills</h2>
           <p class="description">Skills & Attributes</p>
@@ -241,7 +263,7 @@
         </div>
       </section>
       <!-- Work -->
-      <section id="work" class="section work">
+      <section id="work" class="section work" data-nav="work">
         <div class="max-container">
           <h2 class="title">My work</h2>
           <p class="description">Projects</p>
@@ -376,7 +398,11 @@
         </div>
       </section>
       <!-- Testimonials -->
-      <section id="testimonial" class="section max-container testimonial">
+      <section
+        id="testimonial"
+        class="section max-container testimonial"
+        data-nav="testimonial"
+      >
         <h2 class="title">Testimonials</h2>
         <p class="description">See what they say about me</p>
         <ul class="testimonials">
@@ -449,7 +475,7 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="section">
+    <footer id="contact" class="section" data-nav="contact">
       <div class="max-container">
         <h2 class="title">Let&#39;s talk</h2>
         <p class="description">dream.coder.ellie@gmail.com</p>

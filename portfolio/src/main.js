@@ -60,3 +60,15 @@ handleHeaderStyle();
 handleHomeStyle();
 handleArrowUp();
 handmeNavbarMenuToggle();
+
+const headerEl = document.querySelector(".header");
+// const headerHeight = headerEl.getBoundingClientRect().height;
+const headerHeight = headerEl.offsetHeight;
+document.addEventListener("scroll", function () {
+  const scrollY = window.scrollY;
+  if (headerHeight < scrollY) {
+    headerEl.classList.add("primary");
+  } else {
+    headerEl.classList.remove("primary");
+  }
+});
