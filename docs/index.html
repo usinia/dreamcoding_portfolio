@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- escape characters https://mateam.net/html-escape-characters/ -->
+    <title>Ellie&#39;s Portfolio</title>
+    <!-- for seo -->
+    <meta name="description" content="dream coding portfolio course" />
+    <meta name="author" content="ellie" />
+    <!-- for favicon -->
+    <link
+      rel="shortcut icon"
+      href="images/profile/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- for OG(Open Graph Data) : SNS 공유하기때 노출되는 데이터 -->
+    <!-- 영어 버전: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+    한국어 버전: https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML -->
+    <meta property="og:title" content="ellie's portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="배포 후 url" />
+    <meta property="og:image" content="배포 후 image url" />
+    <!-- Google Fonts -->
+    <!-- https://fonts.google.com/ -->
+
+    <!-- Gowun Dodum -->
+    <!-- download url -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- description -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- Gowun Dodum -->
+
+    <!-- noto sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- noto sans -->
+
+    <!-- Font Awesome -->
+    <!-- https://fontawesome.com/ -->
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <!-- defer : not need to wait for the download of this file when interpreting HTML documents -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <img
+          class="header__logo__img"
+          src="images/profile/favicon.ico"
+          alt="logo"
+        />
+        <h1 class="header__logo__title"><a href="#"> Ellie</a></h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li>
+            <a class="header__menu__item active" href="#home" data-nav="home"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#about" data-nav="about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#skills" data-nav="skills"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#work" data-nav="work">Work</a>
+          </li>
+          <li>
+            <a
+              class="header__menu__item"
+              href="#testimonial"
+              data-nav="testimonial"
+              >Testimonial</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#contact" data-nav="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Home -->
+      <section id="home" class="home" data-nav="home">
+        <div class="home__container">
+          <img
+            class="home__avatar"
+            src="images/profile/Profile-removebg-preview.png"
+            alt="Ellie's profile"
+          />
+          <h2 class="home__title">
+            Hello<br />
+            I&#39;m <strong class="home__title--strong">Dream Coder</strong>,
+            Ellie
+          </h2>
+          <p class="home__description">
+            A Sortware Engineer currently residing in Syaney, Australia
+          </p>
+          <a class="home__contact" href="#contact">Contact Me</a>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about" class="section max-container about" data-nav="about">
+        <h2 class="title">About me</h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+          debitis a eos! Mollitia velit sapiente atque id deleniti nostrum
+          magni, fugit ipsum officia corporis, vitae quisquam. Debitis iusto
+          optio exercitationem!
+        </p>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">Front-end</p>
+            <p>HTML, CSS, Javascript, TypeScript, React, Vue, Web APIs</p>
+          </li>
+          <li class="major">
+            <i class="fa-solid fa-mobile major__icon"></i>
+            <p class="major__title">Mobile</p>
+            <p>Android, iOS, React Native, Flutter, Java, Swift, Kotlin</p>
+          </li>
+          <li class="major">
+            <i class="fa-solid fa-server major__icon"></i>
+            <p class="major__title">Back-end</p>
+            <p>Java, Javascript, Go, NodeJs, Rest APIs, GraphQL</p>
+          </li>
+        </ul>
+        <ul class="jobs">
+          <li class="job">
+            <img src="images/jobs/google.png" alt="google logo" />
+            <div>
+              <p class="job__name">Google as Senior Software Engineer</p>
+              <p class="job__period">2019 Oct - Until now</p>
+            </div>
+          </li>
+          <li class="job">
+            <img src="images/jobs/samsung.png" alt="samsung logo" />
+            <div>
+              <p class="job__name">Samsung as Software Engineer</p>
+              <p class="job__period">2014 Sept - 2019 Oct</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- Skills -->
+      <section id="skills" class="section skills" data-nav="skills">
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="description">Skills & Attributes</p>
+          <p>
+            Experience with all phases of the software life-cycle. Passion for
+            learning new technologies. Capable of working within a team
+            environment and independently.
+          </p>
+          <p>
+            Ability to plan and time schedule, work under strict time pressure
+            and adapt quickly when needed.
+          </p>
+          <div class="skills__container">
+            <section class="skills__coding">
+              <h3 class="skills__title">Coding Skills</h3>
+              <ul>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>HTML</span><span>98%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 98%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>CSS</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>JavaScript</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>TypeScript</span><span>80%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 80%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>React</span><span>88%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 88%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>NodeJs</span><span>77%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 77%"></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="skills__tools">
+              <h3 class="skills__title">Tools</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>IntelliJ</li>
+                <li>Android Studio Code</li>
+                <li>iOS development tools</li>
+                <li>Sketch app</li>
+              </ul>
+            </section>
+            <section class="skills__etc">
+              <h3 class="skills__title">Etc</h3>
+              <ul>
+                <li>Git</li>
+                <li>Scrum Master</li>
+                <li>Math</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- Work -->
+      <section id="work" class="section work" data-nav="work">
+        <div class="max-container">
+          <h2 class="title">My work</h2>
+          <p class="description">Projects</p>
+          <ul class="categories">
+            <li>
+              <button class="category category--selected" data-category="all">
+                All <span class="category__count">8</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="frontend">
+                Front-end <span class="category__count">4</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="backend">
+                Back-end <span class="category__count">2</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="mobile">
+                Mobile <span class="category__count">2</span>
+              </button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="project" data-category="frontend">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project1.webp"
+                  alt="project1"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #1</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+            <li class="project" data-category="frontend">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project2.webp"
+                  alt="project2"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #2</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+            <li class="project" data-category="backend">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project3.webp"
+                  alt="project3"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #3</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+            <li class="project" data-category="mobile">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project4.webp"
+                  alt="project4"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #4</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+            <li class="project" data-category="frontend">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project5.webp"
+                  alt="project5"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #5</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+            <li class="project" data-category="backend">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project6.webp"
+                  alt="project6"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #6</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+            <li class="project" data-category="mobile">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project7.webp"
+                  alt="project7"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #7</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+            <li class="project" data-category="frontend">
+              <a href="#" target="_blank"
+                ><img
+                  class="project__img"
+                  src="images/projects/project8.webp"
+                  alt="project8"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__metadata__title">Project #8</h3>
+                  <p>Clone Coding with HTML, CSS</p>
+                </div></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Testimonials -->
+      <section
+        id="testimonial"
+        class="section max-container testimonial"
+        data-nav="testimonial"
+      >
+        <h2 class="title">Testimonials</h2>
+        <p class="description">See what they say about me</p>
+        <ul class="testimonials">
+          <li class="testimonial">
+            <img
+              class="testimonial__img"
+              src="images/testimonials/people1.webp"
+              alt="people1"
+            />
+            <div class="testimonial__bubble">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                illo! Culpa natus beatae tempore sed libero inventore odit eius
+                temporibus. Quae quasi harum quis, repellat ratione quo quos
+                architecto incidunt?
+              </p>
+              <p>
+                <a class="testimonial__bubble__name" href="#">James Kim</a> /
+                Google
+              </p>
+            </div>
+          </li>
+          <li class="testimonial">
+            <img
+              class="testimonial__img"
+              src="images/testimonials/people2.webp"
+              alt="people2"
+            />
+            <div class="testimonial__bubble">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                illo! Culpa natus beatae tempore sed libero inventore odit eius
+                temporibus. Quae quasi harum quis, repellat ratione quo quos
+                architecto incidunt?
+              </p>
+              <p>
+                <a class="testimonial__bubble__name" href="#">Jisu Kim</a> /
+                Samsung
+              </p>
+            </div>
+          </li>
+          <li class="testimonial">
+            <img
+              class="testimonial__img"
+              src="images/testimonials/people3.webp"
+              alt="people3"
+            />
+            <div class="testimonial__bubble">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+                illo! Culpa natus beatae tempore sed libero inventore odit eius
+                temporibus. Quae quasi harum quis, repellat ratione quo quos
+                architecto incidunt?
+              </p>
+              <p>
+                <a class="testimonial__bubble__name" href="#">Anna Jin</a> /
+                Samsung
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- Arrow up -->
+      <aside>
+        <!-- a:title - for screen reader -->
+        <a class="arrow-up" href="#home" title="back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="section" data-nav="contact">
+      <div class="max-container">
+        <h2 class="title">Let&#39;s talk</h2>
+        <p class="description">dream.coder.ellie@gmail.com</p>
+        <ul class="contact__links">
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/dream-ellie"
+              target="_blank"
+              title="my github link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/dream-ellie"
+              target="_blank"
+              title="my linkedin link"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <p>ⓒDream Coding Ellie - All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
